@@ -12,12 +12,23 @@ function getCount(str) {
 }
 getCount('abracadabra');
 
-////////////////////////////////////////////////////////////////////
-
+/////////////////////// String repeat/////////////////////////////////
 // https://www.codewars.com/kata/57a0e5c372292dd76d000d7e
-// String repeat
+
 
 function repeatStr(n, s) {
     console.log(s.repeat(n));
 }
 repeatStr(2, "ha ");
+
+///////////////////Credit Card Mask///////////////////////////////////
+// https://www.codewars.com/kata/5412509bd436bd33920011bc
+
+// return masked string
+function maskify(cc) {
+    for (let i = 0; i < cc.length - 4; i++) {
+        cc = cc.replace(cc[i], '#');
+    }
+    return cc;
+}
+console.log(maskify("64607935616"));
