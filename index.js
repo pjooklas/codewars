@@ -63,3 +63,24 @@ function sumTwoSmallestNumbers(numbers) {
 }
 
 console.log(sumTwoSmallestNumbers([52, 76, 14, 12, 4]));
+
+
+///////////////////Mumbling///////////////////////////////////
+// https://www.codewars.com/kata/5667e8f4e3f572a8f2000039
+
+function accum(s) {
+    const accumArray = s.split('');
+    const newAccumArray = [];
+
+    for (let i = 0; i < accumArray.length; i++) {
+        let accummed = '';
+        do {
+            accummed += accumArray[i];
+        } while (accummed.length - 1 < i);
+        accummed = accummed[0].toUpperCase() + accummed.substring(1).toLowerCase();
+        newAccumArray.push(accummed);
+    }
+    return newAccumArray.join('-');
+}
+
+console.log(accum("ZpglnRxqenU"));
