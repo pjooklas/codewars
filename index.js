@@ -38,8 +38,18 @@ console.log(maskify("64607935616"));
 // https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1
 
 function duplicateCount(text) {
-    let strArray = Array.from(text.toLowerCase());
-    let findDuplicates = arr => arr.filter((item, index) => arr.indexOf(item) != index);
+    const strArray = Array.from(text.toLowerCase());
+    const findDuplicates = arr => arr.filter((item, index) => arr.indexOf(item) != index);
     return [...new Set(findDuplicates(strArray))].length;
 };
 console.log(duplicateCount("Indivisibility"));
+
+
+///////////////////Remove First and Last Character///////////////////////////////////
+// https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0
+
+function removeChar(str) {
+    return str.slice(1, -1);
+};
+
+console.log(removeChar('eloquent'));
