@@ -32,3 +32,14 @@ function maskify(cc) {
     return cc;
 }
 console.log(maskify("64607935616"));
+
+
+///////////////////Count the number of Duplicate///////////////////////////////////
+// https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1
+
+function duplicateCount(text) {
+    let strArray = Array.from(text.toLowerCase());
+    let findDuplicates = arr => arr.filter((item, index) => arr.indexOf(item) != index);
+    return [...new Set(findDuplicates(strArray))].length;
+};
+console.log(duplicateCount("Indivisibility"));
