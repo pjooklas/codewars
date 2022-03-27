@@ -51,5 +51,15 @@ console.log(duplicateCount("Indivisibility"));
 function removeChar(str) {
     return str.slice(1, -1);
 };
+removeChar('eloquent');
 
-console.log(removeChar('eloquent'));
+
+///////////////////Sum of two lowest positive integers///////////////////////////////////
+// https://www.codewars.com/kata/558fc85d8fd1938afb000014
+
+function sumTwoSmallestNumbers(numbers) {
+    numbers.sort((a, b) => a - b);
+    return numbers[0] + numbers[1];
+}
+
+console.log(sumTwoSmallestNumbers([52, 76, 14, 12, 4]));
