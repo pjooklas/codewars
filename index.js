@@ -106,9 +106,7 @@ console.log(describeAge(60));
 // https://www.codewars.com/kata/56f4f7cfaf5b1f8cd100060e
 
 function squaresOnly(a) {
-    let r = []
     return r = a.filter(b => Math.sqrt(b) % 1 === 0);
 }
-
 
 console.log(squaresOnly([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); //36
