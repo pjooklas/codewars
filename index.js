@@ -109,4 +109,14 @@ function squaresOnly(a) {
     return r = a.filter(b => Math.sqrt(b) % 1 === 0);
 }
 
-console.log(squaresOnly([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); //36
+console.log(squaresOnly([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); //[0, 1, 4, 9]
+
+
+///////////////////Be Concise III - Sum Squares///////////////////////////////////
+// https://www.codewars.com/kata/56f8fe6a2e6c0dc83b0008a7
+
+function sumSquares(a) {
+    return r = a.reduce((t, s) => t + Math.pow(s, 2), 0);
+}
+
+console.log(sumSquares([11, 13, 15, 18, 2])); //843
