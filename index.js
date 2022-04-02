@@ -84,3 +84,20 @@ function accum(s) {
 }
 
 console.log(accum("ZpglnRxqenU"));
+
+
+///////////////////Be Concise I - The Ternary Operator///////////////////////////////////
+// https://www.codewars.com/kata/56f3f6a82010832b02000f38
+
+function describeAge(age) {
+    let s = "You're a(n) ";
+    return age <= 12 ?
+        `${s}kid` :
+        age <= 17 ?
+        `${s}teenager` :
+        age <= 64 ?
+        `${s}adult` :
+        `${s}elderly`;
+}
+
+console.log(describeAge(60));
