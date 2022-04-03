@@ -120,3 +120,13 @@ function sumSquares(a) {
 }
 
 console.log(sumSquares([11, 13, 15, 18, 2])); //843
+
+
+///////////////////Parse nice int from char problem///////////////////////////////////
+// https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1
+
+function getAge(inputString) {
+    return parseInt(inputString[0]);
+}
+
+console.log(getAge(5));
