@@ -206,3 +206,18 @@ function likes(names) {
 }
 
 console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']));
+
+
+/////////////////// Stop gninnipS My sdroW! ///////////////////////////////////
+// https://www.codewars.com/kata/5264d2b162488dc400000001
+
+function spinWords(string) {
+    const zodziai = string.split(' ');
+    const atsakymas = [];
+    for (let i = 0; i < zodziai.length; i++) {
+        zodziai[i].length >= 5 ? atsakymas.push(zodziai[i].split("").reverse().join("")) : atsakymas.push(zodziai[i]);
+    }
+    return atsakymas.join(' ');
+}
+
+console.log(spinWords("This is another test"));
