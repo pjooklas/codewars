@@ -141,6 +141,7 @@ longestPalindrome = function(s) {
     } else if (s.length > 1) {
         const wordArray = s.toString().split(' ');
         const palindromeArray = [];
+
         wordArray.forEach(a => {
             let wordForwards = '';
             let wordBackwards = '';
@@ -154,6 +155,7 @@ longestPalindrome = function(s) {
                 }
             }
         });
+
         palindromeArray.sort((a, b) => a.length - b.length);
         let answer = palindromeArray[palindromeArray.length - 1].length;
         return answer;
@@ -166,5 +168,24 @@ longestPalindrome = function(s) {
 console.log(longestPalindrome("aa")); //9
 
 
-/////////////////// longest_palindrome ///////////////////////////////////
-// https://www.codewars.com/kata/54bb6f887e5a80180900046b/javascript
+/////////////////// Multiples of 3 or 5 ///////////////////////////////////
+// https://www.codewars.com/kata/514b92a657cdc65150000006/
+console.log('---');
+
+function solution(number) {
+    if (number) {
+        const setas = new Set;
+        for (let i = 0; i < number; i++) {
+            if (i % 3 == 0 || i % 5 == 0) {
+                setas.add(i);
+            }
+        }
+        let ats = Array.from(setas).reduce((a, b) => a + b, 0);
+        return ats;
+    } else {
+        return 0;
+    }
+
+}
+
+console.log(solution(10));
