@@ -130,3 +130,41 @@ function getAge(inputString) {
 }
 
 console.log(getAge(5));
+
+
+/////////////////// longest_palindrome ///////////////////////////////////
+// https://www.codewars.com/kata/54bb6f887e5a80180900046b/javascript
+
+longestPalindrome = function(s) {
+    if (s.length == 1) {
+        return 1;
+    } else if (s.length > 1) {
+        const wordArray = s.toString().split(' ');
+        const palindromeArray = [];
+        wordArray.forEach(a => {
+            let wordForwards = '';
+            let wordBackwards = '';
+            for (let i = 0; i <= a.length - 1; i++) {
+                for (let k = 0; k <= a.length; k++) {
+                    wordForwards = a.substring(i, k);
+                    wordBackwards = a.split("").reverse().join("").substring(a.length - i, a.length - k);
+                    if (wordForwards == wordBackwards && wordForwards.length > 0) {
+                        palindromeArray.push(wordForwards);
+                    }
+                }
+            }
+        });
+        palindromeArray.sort((a, b) => a.length - b.length);
+        let answer = palindromeArray[palindromeArray.length - 1].length;
+        return answer;
+    } else {
+        return 0;
+    }
+}
+
+
+console.log(longestPalindrome("aa")); //9
+
+
+/////////////////// longest_palindrome ///////////////////////////////////
+// https://www.codewars.com/kata/54bb6f887e5a80180900046b/javascript
