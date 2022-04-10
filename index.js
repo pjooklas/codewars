@@ -255,3 +255,39 @@ function amountOfPages(summary) {
 }
 
 console.log(amountOfPages(25));
+
+
+/////////////////// ISBN-10 Validation ///////////////////////////////////
+// https://www.codewars.com/kata/51fc12de24a9d8cb0e000001
+console.log('---');
+
+function validISBN10(isbn) {
+    const allowed = '0123456789X';
+    let sum = 0;
+
+    for (const symbol of isbn) {
+        if (!allowed.includes(symbol)) {
+            return false;
+        }
+    }
+    if (isbn.length != 10) {
+        return false;
+    }
+    if (isbn.includes('X')) {
+        if (isbn.indexOf('X') !== 9) {
+            return false;
+        }
+    }
+
+    for (let i = 1; i < 11; i++) {
+        let iks = isbn[i - 1] == 'X' ? 10 : isbn[i - 1];
+        sum += i * iks;
+    }
+
+    if (sum % 11 == 0) {
+        return true;
+    } else return false;
+
+}
+
+console.log(validISBN10("081650363X7"));
