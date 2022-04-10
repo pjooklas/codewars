@@ -237,3 +237,21 @@ var countBits = function(n) {
 };
 
 console.log(countBits(1234));
+
+
+/////////////////// How many pages in a book? ///////////////////////////////////
+// https://www.codewars.com/kata/622de76d28bf330057cd6af8
+console.log('---');
+
+function amountOfPages(summary) {
+    let sum = '';
+    let n = 0;
+    do {
+        n++;
+        sum += n;
+    } while (sum.length < summary);
+
+    return n;
+}
+
+console.log(amountOfPages(25));
