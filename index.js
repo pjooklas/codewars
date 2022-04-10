@@ -221,3 +221,19 @@ function spinWords(string) {
 }
 
 console.log(spinWords("This is another test"));
+
+
+/////////////////// Bit Counting ///////////////////////////////////
+// https://www.codewars.com/kata/526571aae218b8ee490006f4
+
+var countBits = function(n) {
+    let count = 0;
+    for (let i = 0; i < n.toString(2).length; i++) {
+        if (n.toString(2)[i] == 1) {
+            count++;
+        }
+    }
+    return count;
+};
+
+console.log(countBits(1234));
