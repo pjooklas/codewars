@@ -291,3 +291,46 @@ function validISBN10(isbn) {
 }
 
 console.log(validISBN10("081650363X7"));
+
+/////////////////// Your order, please ///////////////////////////////////
+// https://www.codewars.com/kata/55c45be3b2079eccff00010f
+console.log('---');
+
+function order(words) {
+    const array = words.split(' ');
+    const sortedArray = [];
+    // console.log(array);
+
+    // for (let i = 0; i < array.length; i++) {
+    //     if (array[i]) {
+    //         console.log(array[i].contains('/\[i]/'));
+    //     }
+    // }
+    console.log(sortedArray);
+}
+
+console.log(order("is2 Thi1s T4est 3a"));
+
+
+/////////////////// Recursive Replication ///////////////////////////////////
+// https://www.codewars.com/kata/57547f9182655569ab0008c4
+console.log('---');
+
+
+function replicate(times, number) {
+    const array = [];
+    const count = times - 1;
+
+
+    array.push(number);
+
+    if (count > 0) {
+        replicate(count, number);
+    }
+
+
+    return array;
+}
+
+
+console.log(replicate(3, 5));
