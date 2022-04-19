@@ -330,8 +330,17 @@ function replicate(times, number) {
     }
     array.push(number);
 
-
     return array;
 }
 
 console.log(replicate(-1, 12));
+
+
+/////////////////// Get list sum recursively ///////////////////////////////////
+// https://www.codewars.com/kata/57a84137cf1fa5f9f80000d6
+
+function sumR(x) {
+    return x.length > 0 ? x.reduce((t, a) => t + a) : 0;
+}
+
+console.log(sumR([1, 1]));
