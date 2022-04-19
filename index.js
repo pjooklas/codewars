@@ -321,16 +321,17 @@ function replicate(times, number) {
     const array = [];
     const count = times - 1;
 
-
-    array.push(number);
-
-    if (count > 0) {
-        replicate(count, number);
+    if (times < 0) {
+        return [];
     }
+    if (count > 0) {
+        const replikatas = replicate(count, number);
+        array.push(...replikatas);
+    }
+    array.push(number);
 
 
     return array;
 }
 
-
-console.log(replicate(3, 5));
+console.log(replicate(-1, 12));
