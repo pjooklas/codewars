@@ -385,3 +385,19 @@ function findOdd(A) {
 }
 
 console.log(findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5])); //5
+
+
+/////////////////// Array.diff ///////////////////////////////////
+// https://www.codewars.com/kata/523f5d21c841566fde000009
+console.log('---');
+
+function arrayDiff(a, b) {
+    let newArr = a;
+    for (let i = 0; i < b.length; i++) {
+        newArr = newArr.filter(x => x != b[i]);
+        console.log(newArr);
+    }
+    return newArr;
+}
+
+console.log(arrayDiff([1, 2, 3], [1, 2]));
