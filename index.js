@@ -344,3 +344,18 @@ function sumR(x) {
 }
 
 console.log(sumR([1, 1]));
+
+
+
+/////////////////// Sum of positive ///////////////////////////////////
+// https://www.codewars.com/kata/5715eaedb436cf5606000381
+console.log('---');
+
+function positiveSum(arr) {
+    if (arr.filter(a => a > 0).length < 1) {
+        return 0;
+    }
+    return arr.filter(a => a > 0).reduce((t, b) => t + b)
+}
+
+console.log(positiveSum([1, 2, 3, 4, 5])); //15
