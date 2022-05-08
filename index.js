@@ -417,7 +417,6 @@ function isIsogram(str) {
             return false;
         }
     }
-
     return true;
 }
 
@@ -438,9 +437,38 @@ function findOutlier(integers) {
             even.push(integers[i]);
         }
     }
-
     return odd.length > even.length ? even[0] : odd[0];
-
 }
 
 console.log(findOutlier([2, 6, 8, 10, 3])); //3
+
+
+/////////////////// Duplicate Encoder ///////////////////////////////////
+// https://www.codewars.com/kata/54b42f9314d9229fd6000d9c
+console.log('---');
+
+function duplicateEncode(word) {
+    word = word.toLowerCase();
+    let countSymbols = {};
+    let dublicateString = '';
+
+    for (let i = 0; i < word.length; i++) {
+        if (countSymbols[word[i]] == undefined) {
+            countSymbols[word[i]] = 1;
+        } else {
+            countSymbols[word[i]] += 1;
+        }
+    }
+
+    for (let i = 0; i < word.length; i++) {
+        if (countSymbols[word[i]] == 1) {
+            dublicateString += '(';
+        } else {
+            dublicateString += ')';
+        }
+    }
+
+    return dublicateString;
+}
+
+console.log(duplicateEncode("recede")); //()()()
