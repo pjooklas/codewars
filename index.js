@@ -494,3 +494,17 @@ function alphabetPosition(text) {
 
 console.log(alphabetPosition("The sunset sets at twelve o' clock."));
 //"20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
+
+
+/////////////////// Persistent Bugger. ///////////////////////////////////
+// https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec
+console.log('---');
+
+function persistence(num) {
+    for (var i = 0; num > 9; i++) {
+        num = num.toString().split('').reduce((t, c) => c * t);
+    }
+    return i;
+}
+
+console.log(persistence(999));
