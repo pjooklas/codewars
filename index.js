@@ -422,3 +422,25 @@ function isIsogram(str) {
 }
 
 console.log(isIsogram("Dermatoglyphics")); //true
+
+
+/////////////////// Find The Parity Outlier ///////////////////////////////////
+// https://www.codewars.com/kata/5526fc09a1bbd946250002dc
+console.log('---');
+
+function findOutlier(integers) {
+    let odd = [];
+    let even = [];
+    for (let i = 0; i < integers.length; i++) {
+        if (integers[i] % 2) {
+            odd.push(integers[i]);
+        } else {
+            even.push(integers[i]);
+        }
+    }
+
+    return odd.length > even.length ? even[0] : odd[0];
+
+}
+
+console.log(findOutlier([2, 6, 8, 10, 3])); //3
