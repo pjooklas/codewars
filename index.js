@@ -508,3 +508,13 @@ function persistence(num) {
 }
 
 console.log(persistence(999));
+
+
+/////////////////// Remove String Spaces ///////////////////////////////////
+// https://www.codewars.com/kata/57eae20f5500ad98e50002c5
+console.log('---');
+
+function noSpace(x) {
+    return x.replace(/\s/g, '');
+}
+console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'));
