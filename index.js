@@ -541,3 +541,33 @@ function order(words) {
 }
 
 console.log(order("4of Fo1r pe6ople g3ood th5e the2")); // "Thi1s is2 3a T4est"
+
+
+/////////////////// Simple Pig Latin ///////////////////////////////////
+// https://www.codewars.com/kata/520b9d2ad5c005041100000f
+console.log('---');
+
+function pigIt(str) {
+    let wordsArray = str.split(' ');
+    let resultArray = [];
+
+    for (let word of wordsArray) {
+        let newWord = '';
+
+        if (/^[a-zA-Z]+$/.test(word)) {
+            if (word.length == 1) {
+                newWord = word + 'ay';
+            } else {
+                newWord = word.slice(-(word.length - 1)) + word[0] + 'ay';
+            }
+        } else {
+            resultArray.push(word);
+        }
+
+        resultArray.push(newWord);
+    }
+
+    return resultArray.join(' ').trim();
+}
+
+console.log(pigIt('Pig latin is cool')); //'igPay atinlay siay oolcay'
