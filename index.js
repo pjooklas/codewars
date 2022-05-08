@@ -518,3 +518,26 @@ function noSpace(x) {
     return x.replace(/\s/g, '');
 }
 console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'));
+
+
+/////////////////// Your order, please ///////////////////////////////////
+// https://www.codewars.com/kata/55c45be3b2079eccff00010f
+console.log('---');
+
+function order(words) {
+    let wordsArray = words.split(' ');
+    let resultArray = [];
+    let resultObj = {};
+
+    for (let i = 1; i < wordsArray.length + 1; i++) {
+        resultObj[+(wordsArray[i - 1].split('').filter(x => +x))] = wordsArray[i - 1];
+    }
+
+    for (let i = 1; i < wordsArray.length + 2; i++) {
+        resultArray.push(resultObj[i - 1]);
+    }
+
+    return words.length != 0 ? resultArray.join(' ').trim() : '';
+}
+
+console.log(order("4of Fo1r pe6ople g3ood th5e the2")); // "Thi1s is2 3a T4est"
