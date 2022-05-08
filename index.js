@@ -472,3 +472,25 @@ function duplicateEncode(word) {
 }
 
 console.log(duplicateEncode("recede")); //()()()
+
+
+/////////////////// Replace With Alphabet Position ///////////////////////////////////
+// https://www.codewars.com/kata/546f922b54af40e1e90001da
+console.log('---');
+
+function alphabetPosition(text) {
+    text = text.toLowerCase();
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    let alphabetSymbolsPosition = '';
+
+    for (let i = 0; i < text.length; i++) {
+        if (alphabet.includes(text[i])) {
+            alphabetSymbolsPosition += alphabet.indexOf(text[i]) + 1 + ' ';
+        }
+    }
+
+    return alphabetSymbolsPosition.trim();
+}
+
+console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+//"20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
