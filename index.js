@@ -395,9 +395,30 @@ function arrayDiff(a, b) {
     let newArr = a;
     for (let i = 0; i < b.length; i++) {
         newArr = newArr.filter(x => x != b[i]);
-        console.log(newArr);
     }
     return newArr;
 }
 
 console.log(arrayDiff([1, 2, 3], [1, 2]));
+
+
+/////////////////// Isograms ///////////////////////////////////
+// https://www.codewars.com/kata/54ba84be607a92aa900000f1
+console.log('---');
+
+function isIsogram(str) {
+    const string = str.toLowerCase();
+    let arrObj = {};
+
+    for (let i = 0; i < string.length; i++) {
+        if (arrObj[string[i]] == undefined) {
+            arrObj[string[i]] = 1;
+        } else {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+console.log(isIsogram("Dermatoglyphics")); //true
