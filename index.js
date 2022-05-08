@@ -558,7 +558,7 @@ function pigIt(str) {
             if (word.length == 1) {
                 newWord = word + 'ay';
             } else {
-                newWord = word.slice(-(word.length - 1)) + word[0] + 'ay';
+                newWord = word.slice(1) + word[0] + 'ay';
             }
         } else {
             resultArray.push(word);
