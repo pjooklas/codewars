@@ -623,3 +623,26 @@ function bmi(weight, height) {
   }
 
 console.log(bmi(80, 1.80)); //normal
+
+
+/////////////////// Count characters in your string ///////////////////////////////////
+// https://www.codewars.com/kata/52efefcbcdf57161d4000091
+console.log('---------------');
+
+function count (string) {  
+    if (string.length==0) return {};
+    let countLetters = {};
+
+    for (let i = 0; i < string.length; i++) {
+        if (isNaN(countLetters[string[i]])) {
+            countLetters[string[i]]=1; 
+            console.log('nulis');
+        }else {
+            countLetters[string[i]]++;  
+            console.log('dadedam');   
+        }
+    }
+     return countLetters;
+  }
+
+console.log(count("aba")); //{ a: 2, b: 1 }); 
