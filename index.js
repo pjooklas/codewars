@@ -645,4 +645,20 @@ function count (string) {
      return countLetters;
   }
 
-console.log(count("aba")); //{ a: 2, b: 1 }); 
+console.log(count("aba")); //{ a: 2, b: 1 });
+
+
+/////////////////// How good are you really? ///////////////////////////////////
+// https://www.codewars.com/kata/5601409514fc93442500010b
+console.log('---------------');
+
+function betterThanAverage(classPoints, yourPoints) {
+    let classSum = 0;
+    classPoints.forEach((point)=>{
+        classSum+=point;
+    });
+    let classAverage = classSum/classPoints.length;
+    return yourPoints>classAverage;  
+}
+
+console.log( betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75)); // True
