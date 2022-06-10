@@ -575,7 +575,7 @@ console.log(pigIt('Pig latin is cool')); //'igPay atinlay siay oolcay'
 
 /////////////////// Moving Zeros To The End ///////////////////////////////////
 // https://www.codewars.com/kata/52597aa56021e91c93000cb0
-console.log('---');
+console.log('---------------');
 
 function moveZeros(arr) {
     let resultArra = [];
@@ -597,3 +597,15 @@ function moveZeros(arr) {
 }
 
 console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"])); // [false,1,1,2,1,3,"a",0,0]
+
+
+/////////////////// Remove exclamation marks ///////////////////////////////////
+// https://www.codewars.com/kata/57a0885cbb9944e24c00008e
+console.log('---------------');
+
+function removeExclamationMarks(s) {
+    return s.split("!").join("");
+  }
+
+console.log(removeExclamationMarks("Hello World!!"));
+
