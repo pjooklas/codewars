@@ -662,3 +662,24 @@ function betterThanAverage(classPoints, yourPoints) {
 }
 
 console.log( betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75)); // True
+
+
+/////////////////// The museum of incredible dull things ///////////////////////////////////
+// https://www.codewars.com/kata/563cf89eb4747c5fb100001b
+console.log('---------------');
+
+function removeSmallest(numbers) {
+    const numbers2 = [...numbers];
+    let smallest=numbers[0];
+
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i]<smallest) {
+            smallest=numbers[i];
+        }    
+    }
+    let index = numbers.indexOf(smallest);
+    numbers2.splice(index, 1);
+    return numbers2;
+}
+
+console.log( removeSmallest([2, 2, 1, 2, 1])); // True
